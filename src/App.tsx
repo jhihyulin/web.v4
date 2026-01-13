@@ -3,6 +3,7 @@ import { ProfileSection } from "@/components/profile-section";
 import { SocialLinks } from "@/components/social-links";
 import { CryptoAddresses } from "@/components/crypto-addresses";
 import { ProjectsSection } from "@/components/projects-section";
+import packageJson from "@/../package.json";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <ProjectsSection />
 
           <footer className="mt-8 pt-6 text-center text-xs text-muted-foreground">
-            <p>© 2026 Thomas Lin</p>
+            <p>© 2026 Thomas Lin · v{packageJson.version}</p>
           </footer>
         </div>
       </div>
