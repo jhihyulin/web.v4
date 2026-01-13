@@ -113,7 +113,7 @@ export function SocialLinks() {
               rel="noopener noreferrer"
               className="group"
             >
-              <Card className="border-0 bg-muted/30 hover:bg-muted/50 shadow-sm transition-colors h-full">
+              <Card className="border-0 bg-muted/30 hover:bg-muted/50 hover:shadow-lg hover:-translate-y-1 shadow-sm transition-all duration-200 h-full">
                 <CardContent className="p-4 flex flex-col items-center justify-center gap-2">
                   <span className="shrink-0 text-2xl group-hover:scale-110 transition-transform">
                     {link.icon}

@@ -19,13 +19,13 @@ export function ProfileSection() {
             className="w-20 h-20 rounded-full object-cover shadow-lg"
           />
           <div className="space-y-1 flex-1">
-            <h1 className="text-4xl font-bold tracking-tight">
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
               {t("name.english")}
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg md:text-xl text-muted-foreground">
               {t("name.legal_zh")}
             </p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-xs md:text-sm text-muted-foreground">
               {t("name.legal_en")}
             </p>
           </div>

@@ -60,7 +60,7 @@ export function ProjectsSection() {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="overflow-hidden border-0 bg-muted/30 hover:bg-muted/50 shadow-sm transition-colors"
+              className="overflow-hidden border-0 bg-muted/30 hover:bg-muted/50 hover:shadow-lg hover:-translate-y-1 shadow-sm transition-all duration-200"
             >
               <CardHeader className="pb-3">
                 <div className="flex items-start justify-between gap-2">
@@ -107,7 +107,7 @@ export function ProjectsSection() {
                 <p className="text-sm text-muted-foreground">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1 md:gap-2">
                   {project.tags.map((tag) => (
                     <Badge key={tag} variant="secondary" className="text-xs">
                       {tag}

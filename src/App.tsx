@@ -10,7 +10,7 @@ function App() {
     <div className="min-h-screen bg-linear-to-br from-background to-muted/20">
       <LanguageSwitcher />
       <div className="container mx-auto px-4 py-12 max-w-3xl">
-        <div className="space-y-6">
+        <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
           <ProfileSection />
           <SocialLinks />
           <CryptoAddresses />
