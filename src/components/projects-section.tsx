@@ -46,6 +46,13 @@ export function ProjectsSection() {
         "TailwindCSS",
       ],
     },
+    {
+      title: "ex-profit-graph",
+      description: "Trading profit graph generator for crypto exchanges.",
+      url: "https://ex-profit-graph.saget.me/",
+      github: "https://github.com/jhihyulin/ex-profit-graph",
+      tags: ["Next.js", "React", "TypeScript", "TailwindCSS"],
+    },
   ];
 
   return (
