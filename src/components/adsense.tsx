@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface AdSenseProps {
   adClient: string;
@@ -17,6 +18,7 @@ export function AdSense({
   style,
   className = "",
 }: AdSenseProps) {
+  const { t } = useTranslation();
   const [scriptLoaded, setScriptLoaded] = useState(false);
 
   useEffect(() => {
@@ -50,7 +52,7 @@ export function AdSense({
   return (
     <div>
       <div className="text-center text-xs text-muted-foreground mb-2">
-        廣告開始
+        {t("ads.start")}
       </div>
       <ins
         className={`adsbygoogle ${className}`}
@@ -61,7 +63,7 @@ export function AdSense({
         data-full-width-responsive={fullWidthResponsive.toString()}
       ></ins>
       <div className="text-center text-xs text-muted-foreground mt-2">
-        廣告結束
+        {t("ads.end")}
       </div>
     </div>
   );

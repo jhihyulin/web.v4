@@ -35,6 +35,10 @@ const resources = {
         ton: "TON",
         sui: "SUI",
       },
+      ads: {
+        start: "Ads start",
+        end: "Ads end",
+      },
       actions: {
         copy: "Copy",
         copied: "Copied!",
