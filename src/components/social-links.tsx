@@ -146,7 +146,7 @@ export function SocialLinks() {
                 <DialogHeader>
                   <DialogTitle>{t("links.email")}</DialogTitle>
                   <DialogDescription>
-                    {t("sections.links")} - Email
+                    {t("sections.links")} - {t("ui.emailDialogDescription")}
                   </DialogDescription>
                 </DialogHeader>
                 <div className="flex items-center gap-2 p-4 bg-muted/50 rounded-lg">
@@ -170,11 +170,11 @@ export function SocialLinks() {
                   <Button asChild>
                     <a href={`mailto:${emailAddress}`}>
                       <Mail className="h-4 w-4 mr-2" />
-                      Open Email Client
+                      {t("actions.openEmailClient")}
                     </a>
                   </Button>
                   <DialogClose asChild>
-                    <Button variant="outline">Close</Button>
+                    <Button variant="outline">{t("actions.close")}</Button>
                   </DialogClose>
                 </DialogFooter>
               </DialogContent>
@@ -199,7 +199,7 @@ export function SocialLinks() {
                 <DrawerHeader>
                   <DrawerTitle>{t("links.email")}</DrawerTitle>
                   <DrawerDescription>
-                    {t("sections.links")} - Email
+                    {t("sections.links")} - {t("ui.emailDialogDescription")}
                   </DrawerDescription>
                 </DrawerHeader>
                 <div className="p-4 pb-0">
@@ -225,11 +225,11 @@ export function SocialLinks() {
                   <Button asChild>
                     <a href={`mailto:${emailAddress}`}>
                       <Mail className="h-4 w-4 mr-2" />
-                      Open Email Client
+                      {t("actions.openEmailClient")}
                     </a>
                   </Button>
                   <DrawerClose asChild>
-                    <Button variant="outline">Close</Button>
+                    <Button variant="outline">{t("actions.close")}</Button>
                   </DrawerClose>
                 </DrawerFooter>
               </DrawerContent>

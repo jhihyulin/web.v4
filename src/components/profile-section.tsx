@@ -15,7 +15,7 @@ export function ProfileSection() {
         <div className="flex items-start gap-4">
           <img
             src="/avatar.jpg"
-            alt="Profile Avatar"
+            alt={t("ui.profileAvatar")}
             className="w-20 h-20 rounded-full object-cover shadow-lg"
           />
           <div className="space-y-1 flex-1">

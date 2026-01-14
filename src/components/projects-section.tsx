@@ -84,7 +84,7 @@ export function ProjectsSection() {
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          aria-label="GitHub"
+                          aria-label={t("projects.ariaLabels.github")}
                         >
                           <FaGithub className="h-4 w-4" />
                         </a>
@@ -101,7 +101,7 @@ export function ProjectsSection() {
                           href={project.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          aria-label="Visit"
+                          aria-label={t("projects.ariaLabels.visit")}
                         >
                           <FaArrowUpRightFromSquare className="h-4 w-4" />
                         </a>

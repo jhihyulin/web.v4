@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { ProfileSection } from "@/components/profile-section";
 import { SocialLinks } from "@/components/social-links";
@@ -8,6 +9,7 @@ import { config } from "@/lib/config";
 import packageJson from "@/../package.json";
 
 function App() {
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-linear-to-br from-background to-muted/20">
       <LanguageSwitcher />
@@ -28,7 +30,7 @@ function App() {
             className="my-6"
           />
           <footer className="mt-8 pt-6 text-center text-xs text-muted-foreground">
-            <p>© 2026 Thomas Lin · v{packageJson.version}</p>
+            <p>{t("footer.copyright", { version: packageJson.version })}</p>
           </footer>
         </div>
       </div>

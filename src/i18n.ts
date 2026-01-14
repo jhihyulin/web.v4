@@ -43,6 +43,21 @@ const resources = {
         copy: "Copy",
         copied: "Copied!",
         copyAddress: "Copy Address",
+        openEmailClient: "Open Email Client",
+        close: "Close",
+      },
+      ui: {
+        profileAvatar: "Profile Avatar",
+        emailDialogDescription: "Email",
+      },
+      footer: {
+        copyright: "© 2026 Thomas Lin · v{{version}}",
+      },
+      projects: {
+        ariaLabels: {
+          github: "GitHub",
+          visit: "Visit",
+        },
       },
     },
   },
