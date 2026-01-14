@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { Copy, Check } from "lucide-react";
+import { Copy, Check, ExternalLink } from "lucide-react";
 import { useState } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { SiBitcoin, SiEthereum, SiSolana, SiTon, SiSui } from "react-icons/si";
@@ -9,6 +9,7 @@ interface CryptoAddress {
   name: string;
   address: string;
   icon: React.ReactNode;
+  explorerUrl: string;
 }
 
 export function CryptoAddresses() {
@@ -20,27 +21,32 @@ export function CryptoAddresses() {
       name: t("crypto.bitcoin"),
       address: "bc1pse2ks9enzy24gujs29p0xy7rskct2snxm33vkpqg47m59syrcfvqwzpy0c",
       icon: <SiBitcoin className="h-6 w-6" />,
+      explorerUrl: "https://mempool.space/zh/address/{address}",
     },
     {
       name: t("crypto.evm"),
       address: "0xffc72cfb709c595db2d7a721b82da8bf2077a0f8",
       icon: <SiEthereum className="h-6 w-6" />,
+      explorerUrl: "https://etherscan.io/address/{address}",
     },
     {
       name: t("crypto.sui"),
       address:
         "0x5d8faa2abe5fe6cfdc76d67c6993812236b35c7d493e1e266bf911e3b357fc21",
       icon: <SiSui className="h-6 w-6" />,
+      explorerUrl: "https://suivision.xyz/account/{address}",
     },
     {
       name: t("crypto.ton"),
       address: "UQCBOkBR63ss7jSmcSo-Bwpkkj-ffLpKsox2IAcr9L3XbPOy",
       icon: <SiTon className="h-6 w-6" />,
+      explorerUrl: "https://tonviewer.com/{address}",
     },
     {
       name: t("crypto.solana"),
       address: "3ZmCBQeue15WzWm6bbt7fTbMMeeuN9f3haQ1rChZyajy",
       icon: <SiSolana className="h-6 w-6" />,
+      explorerUrl: "https://solscan.io/account/{address}",
     },
   ];
 
@@ -69,9 +75,29 @@ export function CryptoAddresses() {
               className="overflow-hidden border-0 bg-muted/30 hover:bg-muted/50 shadow-sm transition-colors"
             >
               <CardHeader className="pb-2">
-                <div className="flex items-center gap-2">
-                  <span className="shrink-0">{crypto.icon}</span>
-                  <p className="text-sm font-semibold">{crypto.name}</p>
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-2">
+                    <span className="shrink-0">{crypto.icon}</span>
+                    <p className="text-sm font-semibold">{crypto.name}</p>
+                  </div>
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    asChild
+                    className="h-8 w-8 p-0"
+                  >
+                    <a
+                      href={crypto.explorerUrl.replace(
+                        "{address}",
+                        crypto.address
+                      )}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={t("ui.viewOnExplorer")}
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </Button>
                 </div>
               </CardHeader>
               <CardContent className="pt-0">

@@ -49,6 +49,7 @@ const resources = {
       ui: {
         profileAvatar: "Profile Avatar",
         emailDialogDescription: "Email",
+        viewOnExplorer: "View on explorer",
       },
       footer: {
         copyright: "© 2026 Thomas Lin · v{{version}}",
