@@ -30,6 +30,23 @@ export function ProjectsSection() {
       tags: ["Next.js", "React", "TypeScript", "TailwindCSS"],
     },
     {
+      title: "[EAD.]",
+      description: "DOOH Auction Platform based on Sui Blockchain.",
+      url: "https://ead.saget.me",
+      github: "https://github.com/jhihyulin/ead",
+      tags: [
+        "Sui",
+        "Move",
+        "ZKLogin",
+        "Walrus",
+        "Testnet",
+        "Vite",
+        "React",
+        "TypeScript",
+        "TailwindCSS",
+      ],
+    },
+    {
       title: "SuiStream",
       description: "Paid video streaming platform based on Sui Walrus & Seal.",
       url: "https://suistream.ndhublockchain.club",
