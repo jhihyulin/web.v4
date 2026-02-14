@@ -1,3 +1,4 @@
+import { config } from "@/lib/config";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -18,6 +19,10 @@ export function AdSense({
   style,
   className = "",
 }: AdSenseProps) {
+  if (config.adsense.enabled === false) {
+    return null;
+  }
+
   const { t } = useTranslation();
   const [scriptLoaded, setScriptLoaded] = useState(false);
 
